@@ -80,7 +80,7 @@ image {
 
 .showcase-content {
     position: relative;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -321,6 +321,12 @@ image {
         display: none;
     }
 
+    .showcase-top img {
+        top: 30%;
+        left: 5%;
+        transform: translate(0);
+    }
+
     .showcase-content h1 {
         font-size: 3.7rem;
         line-height: 1;
@@ -339,8 +345,8 @@ image {
         font-size: 1.5rem;
     }
 
-    .text-xl{
-        font-size: 1.5rem;
+    .text-lg{
+        font-size: 1.2rem;
     }
 
     .text-lg {
@@ -354,6 +360,12 @@ image {
 }
 
 @media(max-width: 768px) {
+
+    .showcase::after {
+        box-shadow: inset 50px 50px 250px #000000, inset -50px -50px 250px #000000;
+
+    }
+
     #tab-1-content .tab-1-content-inner{
         grid-template-columns: 1fr;
         text-align: center;
@@ -369,5 +381,35 @@ image {
         text-align: center;
     }
 
+}
+
+@media (max-width: 450px) {
+    .text-lg {
+        font-size: 0.8rem;
+    }
+
+    .btn-xl {
+        font-size: 0.5rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .showcase {
+        height: 50vh;
+    }
+
+    .showcase-content h1 {
+        font-weight: 400;
+        font-size: 2.2rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+
+    .showcase-content p {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 100%;
+    }
 }
 
